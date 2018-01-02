@@ -42,7 +42,11 @@ public class Burger {
     }
 
     public void pushAddition(Addition addition) {
-        this.addition[this.counter] = addition;
+        if (this.counter < 10) {
+            this.addition[this.counter] = addition;
+        } else {
+            System.out.println("Sorry, a maximum of 10 Additions can be added");
+        }
     }
 
     public void setLettuce(int lettuce) {
